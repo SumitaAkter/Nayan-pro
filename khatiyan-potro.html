@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    
+    <style>
+        body {
+            font-family: 'SolaimanLipi', Arial, sans-serif;
+            margin: 40px;
+            background-color: white;
+        }
+        .container {
+           
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: #b35151;
+            border: 1px solid #000;
+        }
+        .table-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .table-header div {
+            text-align: center;
+            width: 33%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+        th {
+            background-color: #8e24aa;
+        }
+        .double-border {
+            border: 2px solid #000;
+        }
+        .right-align {
+            text-align: right;
+        }
+        .last-row{
+            background-color: green;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <div class="table-header">
+            <div>খতিয়ান নং: ৫০</div>
+            <div>হোল্ডিং নং: ৭০</div>
+        </div>
+        <div class="table-header">
+            <div>বিভাগ: ঢাকা</div>
+            <div>জেলা: ঢাকা</div>
+            <div>উপজেলা/থানা: মিরপুর</div>
+            <div>মৌজা: মিরপুর</div>
+            <div>জেএল নং: ৩০</div>
+        </div>
+
+        <table>
+            <tr>
+                <th rowspan="2">মালিকের নাম</th>
+                <th rowspan="2">অংশ</th>
+                <th rowspan="2">দাগ নং</th>
+                <th colspan="2">জমির শ্রেণী</th>
+                <th colspan="2">অংশ অনুযায়ী জমির পরিমাণ</th>
+            </tr>
+            <tr>
+                <th>কৃষি</th>
+                <th>অকৃষি</th>
+                <th>একর</th>
+                <th>শতাংশ</th>
+            </tr>
+            <tr>
+                <td>আকবর আলী</td>
+                <td>০.৩২১</td>
+                <td>১৩৫০</td>
+                <td>পুকুর</td>
+                <td>নাল</td>
+                <td>১</td>
+                <td>১৫</td>
+            </tr>
+            <tr>
+                <td>আনিসুর আলী</td>
+                <td>০.১০৯</td>
+                <td>১৩৫১</td>
+                <td>ডিটো</td>
+                <td>নাল</td>
+                <td>৫</td>
+                <td>৫</td>
+            </tr>
+            <tr>
+                <td>রহিম খন্দকার</td>
+                <td>০.১৩</td>
+                <td>১৩৫২</td>
+                <td>ডিটো</td>
+                <td>নাল</td>
+                <td>৫</td>
+                <td>১০</td>
+            </tr>
+            <tr class="last-row">
+                <td style=" column-span: 2;">১.৪৫ </td>
+                <td colspan="5" class="right-align">মোট জমি = ১ একর</td>
+                <td>৯০</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

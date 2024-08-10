@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>অনলাইন ঘাটাইকরন</title>
+    <script src="https://kit.fontawesome.com/a7779cc3f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h2> 
+                <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> <!-- Location Pin Icon -->
+                অনলাইন যাটাইকরন
+            </h2>
+        </div>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="division">বিভাগ নির্বাচন করুন</label>
+                <select id="division" name="division">
+                    <option>বিভাগ</option>
+                    <option>ঢাকা </option>
+                    <option>সিলেট </option>
+                    <option>বরিশাল </option>
+                    <option>রংপুর </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mouza">মৌজা নির্বাচন করুন</label>
+                <select id="mouza" name="mouza">
+                    <option>মৌজা</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="district">জেলা নির্বাচন করুন</label>
+                <select id="district" name="district" class="searchable-dropdown">
+                    <option value="1">জেলা</option>
+                    <option value="2">বরগুনা</option>
+                    <option value="3">বরিশাল</option>
+                    <option value="4">ভোলা</option>
+                    <option value="5">ঝালকাঠি</option>
+                    <option value="6">পটুয়াখালী</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="upazila">উপজেলা নির্বাচন করুন</label>
+                <select id="upazila" name="upazila">
+                    <option>উপজেলা</option>
+                </select>
+            </div>
+            <div class="last-group">
+                <label for="khatian"><input type="radio" id="khatian" name="option" value="খতিয়ান নং" onclick="updatePlaceholder(this.value)" checked>খতিয়ান নং </label>
+                <label for="dag"><input type="radio" id="dag" name="option" value="দাগ নং" onclick="updatePlaceholder(this.value)">দাগ নং </label>
+                <label for="maliker-nam"><input type="radio" id="maliker-nam" name="option" value="মালিকের নাম" onclick="updatePlaceholder(this.value)">মালিকের নাম</label>
+                
+                <input type="text" id="inputField" class="input-field" placeholder="">
+            </div>
+            <div class="form-group submit-button">
+                <button type="submit"><a class="login-button" href="khatiyan-potro.html">অনুসন্ধান করুন</a></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function updatePlaceholder(value) {
+            document.getElementById("inputField").placeholder = value;
+        }
+    </script>
+     
+</body>
+</html>
